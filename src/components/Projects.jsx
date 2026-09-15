@@ -4,18 +4,21 @@ const projects = [
     description:
       "A responsive portfolio website built using React JS and Tailwind CSS.",
     technologies: "React JS, Tailwind CSS",
+    link: "#",
   },
   {
-    title: "Student Management System",
+    title: "Brgy. Guinhawa Portal",
     description:
-      "A system for managing student records and information.",
-    technologies: "HTML, CSS, JavaScript",
+      "A barangay information and service portal built to support local operations and public access.",
+    technologies: "HTML, CSS, JavaScript, PHP",
+    link: "https://brgyguinhawasystem.infinityfreeapp.com/",
   },
   {
-    title: "Task Management App",
+    title: "ShelfSnap",
     description:
-      "A simple application for creating and tracking tasks.",
-    technologies: "React JS",
+      "A Library Management System where users can borrow, return, and track books efficiently.",
+    technologies: "React JS, Tailwind CSS, JavaScript",
+    link: "#",
   },
 ];
 
@@ -41,9 +44,18 @@ function Projects() {
                 {project.description}
               </p>
 
-              <p className="text-sm text-slate-400">
+              <p className="mb-5 text-sm text-slate-400">
                 {project.technologies}
               </p>
+
+              <a
+                href={project.link && project.link !== "#" ? project.link : "#"}
+                target={project.link && project.link !== "#" ? "_blank" : undefined}
+                rel={project.link && project.link !== "#" ? "noreferrer" : undefined}
+                className="inline-block rounded-md bg-sky-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-600"
+              >
+                View Project
+              </a>
             </article>
           ))}
         </div>
