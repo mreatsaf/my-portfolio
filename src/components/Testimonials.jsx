@@ -21,6 +21,10 @@ function Testimonials() {
             <p className="text-slate-400">
               Bachelor of Science in Information Technology
             </p>
+
+            <p className="text-slate-400">
+              Batch 2028
+            </p>
           </div>
         </div>
       </div>
